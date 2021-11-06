@@ -1,19 +1,19 @@
 {
-  "name": "@codemirror/theme-one-dark",
-  "version": "0.19.0",
-  "description": "One Dark theme for the CodeMirror code editor",
+  "name": "theme-simple-white",
+  "version": "1.0.0",
+  "description": "Simple White theme for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
-    "prepare": "cm-buildhelper src/one-dark.ts"
+    "prepare": "cm-buildhelper src/simple-white.ts"
   },
   "keywords": [
     "editor",
     "code"
   ],
   "author": {
-    "name": "Marijn Haverbeke",
-    "email": "marijnh@gmail.com",
-    "url": "http://marijnhaverbeke.nl"
+    "name": "Shrey Ravi",
+    "email": "shreyastallamraju@gmail.com",
+    "url": "http://shreyravi.com"
   },
   "type": "module",
   "main": "dist/index.cjs",
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codemirror/theme-one-dark.git"
+    "url": "https://github.com/ShreyRavi/theme-simple-white.git"
   }
 }

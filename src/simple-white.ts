@@ -2,8 +2,6 @@ import {EditorView} from "@codemirror/view"
 import {Extension} from "@codemirror/state"
 import {HighlightStyle, tags as t} from "@codemirror/highlight"
 
-// Using https://github.com/one-dark/vscode-one-dark-theme/ as reference for the colors
-
 const chalky = "#e5c07b",
   coral = "#e06c75",
   cyan = "#56b6c2",
@@ -14,14 +12,14 @@ const chalky = "#e5c07b",
   sage = "#98c379",
   whiskey = "#d19a66",
   violet = "#c678dd",
-  darkBackground = "#21252b",
-  highlightBackground = "#2c313a",
-  background = "#282c34",
-  selection = "#3E4451",
-  cursor = "#528bff"
+  lightBackground = "#f3f6f4",
+  highlightBackground = "#E0E0ED",
+  background = "#FFFFFF",
+  selection = "#eeeeee",
+  cursor = "#010101"
 
-/// The editor theme styles for One Dark.
-export const oneDarkTheme = EditorView.theme({
+/// The editor theme styles for simple white.
+export const simpleWhiteTheme = EditorView.theme({
   "&": {
     color: ivory,
     backgroundColor: background
@@ -34,7 +32,7 @@ export const oneDarkTheme = EditorView.theme({
   "&.cm-focused .cm-cursor": {borderLeftColor: cursor},
   "&.cm-focused .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {backgroundColor: selection},
 
-  ".cm-panels": {backgroundColor: darkBackground, color: ivory},
+  ".cm-panels": {backgroundColor: lightBackground, color: ivory},
   ".cm-panels.cm-panels-top": {borderBottom: "2px solid black"},
   ".cm-panels.cm-panels-bottom": {borderTop: "2px solid black"},
 
@@ -72,11 +70,11 @@ export const oneDarkTheme = EditorView.theme({
 
   ".cm-tooltip": {
     border: "1px solid #181a1f",
-    backgroundColor: darkBackground
+    backgroundColor: lightBackground
   },
   ".cm-tooltip.cm-tooltip-arrow:before": {
-    borderTopColor: darkBackground,
-    borderBottomColor: darkBackground
+    borderTopColor: lightBackground,
+    borderBottomColor: lightBackground
   },
   ".cm-tooltip.cm-tooltip-arrow:after": {
     borderTopColor: "#181a1f",
@@ -90,8 +88,8 @@ export const oneDarkTheme = EditorView.theme({
   }
 }, {dark: true})
 
-/// The highlighting style for code in the One Dark theme.
-export const oneDarkHighlightStyle = HighlightStyle.define([
+/// The highlighting style for code in the Simple White theme.
+export const simpleWhiteHighlightStyle = HighlightStyle.define([
   {tag: t.keyword,
    color: violet},
   {tag: [t.name, t.deleted, t.character, t.propertyName, t.macroName],
@@ -130,4 +128,4 @@ export const oneDarkHighlightStyle = HighlightStyle.define([
 
 /// Extension to enable the One Dark theme (both the editor theme and
 /// the highlight style).
-export const oneDark: Extension = [oneDarkTheme, oneDarkHighlightStyle]
+export const simpleWhite: Extension = [simpleWhiteTheme, simpleWhiteHighlightStyle]
